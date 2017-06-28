@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      name="setUp"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[
+]]>
+    </Verbatim>
+  </Procedure>

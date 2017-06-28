@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testThrowsExcpetionDifferentFromExpected_showsAssertError"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[mockUtpAssertor =  Mock.createMock(UtpAssertor);
+Mock.expect(mockUtpAssertor.assertTrue(true));
+Mock.expect(mockUtpAssertor.setTestName("TestTools.TestUnit.Tests.Objects.WasRunTestException__testWhichThrowsAnExceptionButExceptADifferentOne"));
+Mock.expect(mockUtpAssertor.assert(false, "Expected GT.Runtime.Exceptions.InviteCancelledException('An invite cancelled exception')"+
+                                          " but was a GT.Runtime.Exceptions.Exception('A generic exception')"))
+Mock.replay(mockUtpAssertor);
+
+wasRun = new WasRunTestException("testWhichThrowsAnExceptionButExceptADifferentOne", mockUtpAssertor);
+
+wasRun.run(this);
+
+Mock.verify(mockUtpAssertor,this);
+]]>
+    </Verbatim>
+  </Procedure>

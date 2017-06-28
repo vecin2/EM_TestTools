@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="StringUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="FrameworkCommon" />
+        <PackageName
+            name="API" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="StringUtil" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="UnexpectedException">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Exceptions" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="UnexpectedException" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="FileHelper">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="PruCommon" />
+        <PackageName
+            name="API" />
+        <PackageName
+            name="FileProcessing" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="FileHelper" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="KTestCase"
+        nested="false"
+        version="4.1.0">
+      <InstanceFields>
+        <StringField
+            designNotes=""
+            isAttribute="false"
+            length="0"
+            name="name">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="assertor">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="UtpAssertor"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="expectedException">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="Exception"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="testCasesIterator">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="GTListIterator"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <ConstructionProcedure
+          name="KTestCase"
+          nested="true" />
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="run"
+            nested="true" />
+        <Procedure
+            name="setUp"
+            nested="true" />
+        <Procedure
+            name="tearDown"
+            nested="true" />
+        <Procedure
+            name="getAssertor"
+            nested="true" />
+        <Procedure
+            name="configAssertor"
+            nested="true" />
+        <Procedure
+            name="handleException"
+            nested="true" />
+        <Procedure
+            name="runTestMethod"
+            nested="true" />
+        <Procedure
+            name="runTestMethodList"
+            nested="true" />
+        <Procedure
+            name="getTestsToRun"
+            nested="true" />
+        <Procedure
+            name="assertEquals"
+            nested="true" />
+        <Procedure
+            name="expectException"
+            nested="true" />
+        <Procedure
+            name="equals"
+            nested="true" />
+        <Procedure
+            name="isKTestCase"
+            nested="true" />
+        <Procedure
+            name="assertNotNullOrUndefined"
+            nested="true" />
+        <Procedure
+            name="assertNullOrUndefined"
+            nested="true" />
+        <Procedure
+            name="assert"
+            nested="true" />
+        <Procedure
+            name="runTestsLeft"
+            nested="true" />
+        <Procedure
+            name="handleUnexpectedException"
+            nested="true" />
+        <Procedure
+            name="handleExpectedException"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

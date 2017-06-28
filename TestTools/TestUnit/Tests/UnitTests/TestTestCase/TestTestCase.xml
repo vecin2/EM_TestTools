@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConstructionProcedure [] >
+  <ConstructionProcedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="TestTestCase"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <StringField
+        length="0"
+        name="name" />
+    <Verbatim
+        fieldName="text">
+<![CDATA[this.name =name;
+]]>
+    </Verbatim>
+  </ConstructionProcedure>

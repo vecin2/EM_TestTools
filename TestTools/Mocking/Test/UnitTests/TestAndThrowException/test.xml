@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="test"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="collaborator">
+        <TypeDefinitionReference
+            name="Collaborator"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator = Mock.createMock(Collaborator);
+
+Mock.expect(collaborator.documentAdded("New Document"))
+    .andThrow(new SomeException("Some exception message"));
+Mock.replay(collaborator);
+
+
+collaborator.documentAdded("New Document")
+]]>
+    </Verbatim>
+  </Procedure>

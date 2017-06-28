@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="GTFileUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="FrameworkCommon" />
+        <PackageName
+            name="API" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="GTFileUtil" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="StringUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="FrameworkCommon" />
+        <PackageName
+            name="API" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="StringUtil" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="ObjectRepository"
+        nested="false"
+        version="4.1.0">
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="listTestCases"
+            nested="true" />
+        <Procedure
+            name="createInstance"
+            nested="true" />
+        <Procedure
+            name="computeFullyQualifiedName"
+            nested="true" />
+        <Procedure
+            name="listFiles"
+            nested="true" />
+        <Procedure
+            name="getRepositoryPath"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

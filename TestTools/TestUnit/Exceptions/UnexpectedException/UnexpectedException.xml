@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConstructionProcedure [] >
+  <ConstructionProcedure
+      designNotes="Undefined"
+      name="UnexpectedException"
+      version="4.1.0">
+    <StringField
+        isAttribute="false"
+        length="0"
+        name="message">
+      <StringField_loc
+          locale="">
+        <Format />
+      </StringField_loc>
+    </StringField>
+    <Verbatim
+        fieldName="text">
+<![CDATA[
+]]>
+    </Verbatim>
+  </ConstructionProcedure>

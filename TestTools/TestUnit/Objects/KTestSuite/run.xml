@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="run"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="testCase">
+        <TypeDefinitionReference
+            name="KTestCase"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <ObjectField
+        designNotes=""
+        name="assertor">
+      <TypeDefinitionReference
+          name="GTUnitTestProcess"
+          nested="false" />
+    </ObjectField>
+    <Verbatim
+        fieldName="text">
+<![CDATA[for (var i=0; i < testCases.size(); i++){
+    testCase = testCases.get(i);
+    testCase.run(assertor);
+}
+]]>
+    </Verbatim>
+  </Procedure>

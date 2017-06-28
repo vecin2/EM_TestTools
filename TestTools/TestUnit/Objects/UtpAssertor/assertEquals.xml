@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="assertEquals"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <StringField
+          designNotes=""
+          length="0"
+          name="expectedToString" />
+      <StringField
+          designNotes=""
+          length="0"
+          name="actualToString" />
+    </ProcedureLocals>
+    <ObjectField
+        designNotes=""
+        name="expected">
+      <TypeDefinitionReference
+          name="ObjectField"
+          nested="false" />
+    </ObjectField>
+    <ObjectField
+        designNotes=""
+        name="actual">
+      <TypeDefinitionReference
+          name="ObjectField"
+          nested="false" />
+    </ObjectField>
+    <StringField
+        designNotes=""
+        length="0"
+        name="message" />
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(expected==actual)
+    utp.assert(true);
+else{
+    if(typeof(expected)== "string" || typeof(expected)=="boolean"
+            ||  typeof(expected)=="number"){
+        if(!message && typeof(expected)== "string" && typeof(actual)=="string"){
+            message =getRelevantAssertionMessage(expected, actual);
+        }
+
+        utp.assertEquals(expected, actual, message);
+
+    }
+    else if((expected ==null || actual == null)){
+        utp.assertEquals(expected, actual, message);
+    }
+    else if(!expected.equals(actual)){
+        utp.assert(false,getRelevantAssertionMessage(StringHelper.stringify(expected),
+                        StringHelper.stringify(actual)) +
+                "----------------------------------------------expected: "+ StringHelper.stringify(expected) +
+                " but was: "+ StringHelper.stringify(actual));
+    }
+    utp.assert(true);
+}
+]]>
+    </Verbatim>
+  </Procedure>

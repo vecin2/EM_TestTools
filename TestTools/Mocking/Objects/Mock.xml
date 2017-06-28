@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="GTFieldUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Utils" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="GTFieldUtil" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="Mock"
+        nested="false"
+        version="4.1.0">
+      <ClassFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="mockInstance">
+          <ObjectField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[new Mock()]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="Mock"
+              nested="false" />
+        </ObjectField>
+      </ClassFields>
+      <InstanceFields>
+        <BooleanField
+            designNotes=""
+            isAttribute="false"
+            name="isVerifying">
+          <BooleanField_loc
+              locale="">
+            <Format />
+          </BooleanField_loc>
+        </BooleanField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="objectMocked">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="GTObject"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="verifier">
+          <ObjectField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[new Verifier();]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="Verifier"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <ClassProcedures
+          name="">
+        <Procedure
+            name="createMock"
+            nested="true" />
+        <Procedure
+            name="verify"
+            nested="true" />
+        <Procedure
+            name="getMock"
+            nested="true" />
+        <Procedure
+            name="replay"
+            nested="true" />
+        <Procedure
+            name="verifyMsg"
+            nested="true" />
+        <Procedure
+            name="castToMockedObject"
+            nested="true" />
+        <Procedure
+            name="expect"
+            nested="true" />
+        <Procedure
+            name="partialMock"
+            nested="true" />
+      </ClassProcedures>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="onMethodCalled"
+            nested="true" />
+        <Procedure
+            name="setObjectPath"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

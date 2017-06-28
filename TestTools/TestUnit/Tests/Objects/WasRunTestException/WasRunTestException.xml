@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConstructionProcedure [] >
+  <ConstructionProcedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="WasRunTestException"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[super(name, assertor);
+]]>
+    </Verbatim>
+    <StringField
+        designNotes=""
+        isAttribute="false"
+        length="0"
+        name="name" />
+    <ObjectField
+        isAggregate="false"
+        isAttribute="false"
+        name="assertor">
+      <TypeDefinitionReference
+          name="GTUnitTestProcess"
+          nested="false" />
+    </ObjectField>
+    <ReferenceParameters />
+    <ProcedureLocals />
+  </ConstructionProcedure>

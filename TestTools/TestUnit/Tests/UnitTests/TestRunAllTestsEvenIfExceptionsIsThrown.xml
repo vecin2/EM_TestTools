@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="KTestCase">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCase" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="WasRunTestException">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Tests" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="WasRunTestException" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="Mock">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="Mock" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="UtpAssertor">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="UtpAssertor" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="TestRunAllTestsEvenIfExceptionsIsThrown"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="KTestCase"
+          nested="false" />
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="testRunAllMethodsEvenIfExceptionThrown"
+            nested="true" />
+        <Procedure
+            name="testUsingSeveralExceptionMethods"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

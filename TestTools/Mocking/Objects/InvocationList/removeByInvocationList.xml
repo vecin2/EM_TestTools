@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="removeByInvocationList"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="result">
+        <TypeDefinitionReference
+            name="InvocationList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="invocationRemoved">
+        <TypeDefinitionReference
+            name="Invocation"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <ObjectField
+        name="elementsToRemove">
+      <TypeDefinitionReference
+          name="InvocationList"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <ObjectField
+          name="">
+        <TypeDefinitionReference
+            name="InvocationList"
+            nested="false" />
+      </ObjectField>
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[result = new InvocationList();
+for(var i=0; i< elementsToRemove.size(); i++){
+    invocationRemoved = removeFirstFound(elementsToRemove.get(i));
+    if(invocationRemoved)
+        result.add(invocationRemoved);
+}
+
+return result;
+]]>
+    </Verbatim>
+  </Procedure>

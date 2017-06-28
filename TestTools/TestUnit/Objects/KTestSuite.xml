@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="ObjectRepository">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ObjectRepository" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="KTestSuite"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="KTestCase"
+          nested="false" />
+      <InstanceFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="testCases">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="KTestCaseList"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <ConstructionProcedure
+          name="KTestSuite"
+          nested="true" />
+      <ClassProcedures
+          name="">
+        <Procedure
+            name="buildFromPackage"
+            nested="true" />
+      </ClassProcedures>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="add"
+            nested="true" />
+        <Procedure
+            name="run"
+            nested="true" />
+        <Procedure
+            name="isEmpty"
+            nested="true" />
+        <Procedure
+            name="toString"
+            nested="true" />
+        <Procedure
+            name="addAll"
+            nested="true" />
+        <Procedure
+            name="getTestCases"
+            nested="true" />
+        <Procedure
+            name="equals"
+            nested="true" />
+        <Procedure
+            name="getTestsToRun"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

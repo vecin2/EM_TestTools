@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="registerCall"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="currentInvocation">
+        <TypeDefinitionReference
+            name="Invocation"
+            nested="false" />
+      </ObjectField>
+      <StringField
+          designNotes=""
+          length="0"
+          name="arg" />
+      <ObjectField
+          designNotes=""
+          name="resultInvocation">
+        <TypeDefinitionReference
+            name="Invocation"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <StringField
+        designNotes=""
+        length="0"
+        name="methodName" />
+    <ObjectField
+        designNotes=""
+        name="args">
+      <TypeDefinitionReference
+          name="GTList"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <ObjectField
+          designNotes=""
+          name="">
+        <TypeDefinitionReference
+            name="GTObject"
+            nested="false" />
+      </ObjectField>
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[currentInvocation = new Invocation(objectPath, methodName, args);
+LastInvocation.setLastInvocation(currentInvocation);
+if(isRegistering){
+    addExpectedInvocation(currentInvocation);
+    return LastInvocation.getLastInvocation().returnValue;
+}
+else{
+  addActualInvocation(currentInvocation);
+  resultInvocation = expectedResults.removeFirstFound(currentInvocation);
+    if(resultInvocation)
+        return resultInvocation.returnValue;
+}
+]]>
+    </Verbatim>
+  </Procedure>

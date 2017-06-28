@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testReturnsOneErrorPerEachMissedInvocation"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator = Mock.createMock(Collaborator);
+
+collaborator.computeTotal(new Collaborator("collab1"), new Collaborator("collab2"));
+collaborator.logRemove(new Collaborator("collab3"));
+collaborator.documentAdded("New Document");
+collaborator.documentAdded("New Document");
+
+Mock.replay(collaborator);
+
+collaborator.documentAdded("New Document");
+
+assertEquals("Expectation failure on verify: "+
+    "Collaborator.computeTotal(Collaborator[name=collab1], Collaborator[name=collab2]): expected: 1, actual: 0 "+
+    "Collaborator.logRemove(Collaborator[name=collab3]): expected: 1, actual: 0 "+
+    "Collaborator.documentAdded(\"New Document\"): expected: 2, actual: 1", Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+  </Procedure>

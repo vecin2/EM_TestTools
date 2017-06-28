@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="KTestCase">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCase" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="StringHelper">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="BasicTypes" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="StringHelper" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="TestStringHelper"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="KTestCase"
+          nested="false" />
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="testFindFirstDifferentCharacterAtXPosition"
+            nested="true" />
+        <Procedure
+            name="testIndexOfDifferentCharacter_sameStrings"
+            nested="true" />
+        <Procedure
+            name="testIndexOfDifferentCharacter_string2StartsWithString1"
+            nested="true" />
+        <Procedure
+            name="testGetRelevantSubstring"
+            nested="true" />
+        <Procedure
+            name="assertGetStringAroundChar"
+            nested="true" />
+        <Procedure
+            name="testIndexOfDifferentCharacter_stringNull"
+            nested="true" />
+        <Procedure
+            name="testThrowsExceptionWhenArgumentBoolean"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="KTestCase">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCase" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="UtpAssertor">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="UtpAssertor" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="Mock">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="Mock" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="TestUtpAssertor"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="KTestCase"
+          nested="false" />
+      <InstanceFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="utpAssertor">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="UtpAssertor"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="testfailLongStringAssertDisplaysRelevantInforamtion"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

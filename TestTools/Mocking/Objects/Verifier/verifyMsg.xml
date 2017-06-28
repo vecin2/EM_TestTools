@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="verifyMsg"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <StringField
+          designNotes=""
+          length="0"
+          name="errorMsg" />
+    </ProcedureLocals>
+    <ResultType>
+      <StringField
+          designNotes=""
+          length="0"
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[errorMsg =null;
+
+if(isRegistering)
+    errorMsg = "Calling verify is not allowed in record state";
+else if(!behaviourAsExpected()){
+    if(unexpectedInvocation==null){
+        errorMsg = "Expectation failure on verify:"+ getErrorMessages();
+    }
+    else{
+        errorMsg = "Unexpected method call "+unexpectedInvocation.toString()+":"
+        if(!expectedInvocations.isEmpty()){
+            errorMsg+= getErrorMessages();
+        }
+    }
+}
+
+return errorMsg;
+]]>
+    </Verbatim>
+  </Procedure>

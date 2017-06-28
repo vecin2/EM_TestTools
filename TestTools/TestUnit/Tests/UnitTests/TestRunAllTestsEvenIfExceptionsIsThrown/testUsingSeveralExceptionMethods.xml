@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testUsingSeveralExceptionMethods"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="wasRun">
+        <TypeDefinitionReference
+            name="WasRunTestException"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[wasRun = new WasRunTestException(null, Mock.createMock(UtpAssertor));
+
+wasRun.run(this);
+
+getAssertor().assertEquals("setup testMethod tearDown setup testBrokenMethod tearDown setup testSecondMethod tearDown setup testThirdMethod tearDown ",wasRun.log);
+]]>
+    </Verbatim>
+  </Procedure>

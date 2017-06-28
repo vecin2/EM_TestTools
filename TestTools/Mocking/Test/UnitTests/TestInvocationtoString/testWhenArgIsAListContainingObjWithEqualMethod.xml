@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testWhenArgIsAListContainingObjWithEqualMethod"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="params">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          designNotes=""
+          name="collaboratorList">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaboratorList = new GTList();
+collaboratorList.add(new Collaborator("Collaborator number 1"));
+collaboratorList.add(new Collaborator("Collaborator number 2"));
+params = new GTList();
+params.add(collaboratorList);
+invocation = new Invocation(Collaborator.getFullyQualifiedName(),"workingWithList",params);
+
+assertEquals("Collaborator.workingWithList("+
+                  "Collaborator[name=Collaborator number 1], "+
+                  "Collaborator[name=Collaborator number 2])", invocation.toString());
+//"Collaborator.logRemoved(Collaborator[name=Collaborator number 1])"
+]]>
+    </Verbatim>
+  </Procedure>

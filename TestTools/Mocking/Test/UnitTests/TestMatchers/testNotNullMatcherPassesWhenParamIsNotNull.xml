@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testNotNullMatcherPassesWhenParamIsNotNull"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator = Mock.createMock(Collaborator);
+collaborator.documentAdded("document");
+collaborator.logRemove(Matcher.notNull());
+
+Mock.replay(collaborator);
+
+collaborator.documentAdded("document");
+collaborator.logRemove(new Collaborator("Collaborator 1"));
+
+
+assertEquals(null, Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+  </Procedure>

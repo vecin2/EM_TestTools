@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="createMock"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="mockedObject">
+        <TypeDefinitionReference
+            name="IMockedObject"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          designNotes=""
+          name="instanceProcedures">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <StringField
+          designNotes=""
+          length="0"
+          name="methodName" />
+      <StringField
+          designNotes=""
+          length="0"
+          name="args" />
+    </ProcedureLocals>
+    <ResultType>
+      <ObjectField
+          designNotes=""
+          name="">
+        <TypeDefinitionReference
+            name="GTObject"
+            nested="false" />
+      </ObjectField>
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[GTReflection.getConstructor(object.getFullyQualifiedName())
+mockedObject = GTReflection.createInstance(object.getFullyQualifiedName());
+instanceProcedures = computeMethodsToMock();
+for(var i =0; i < instanceProcedures.size(); i++){
+    methodName = instanceProcedures.get(i).getName();
+    args = GTFieldUtil.listToString(instanceProcedures.get(i).getParameters());
+    mockedObject.mock =new Mock();
+    mockedObject.mock.setObjectPath(object.getFullyQualifiedName());
+    if(args!="")
+        mockedObject[methodName]= new Function(args,
+                "return this.mock.onMethodCalled(\""+methodName+"\","+
+                args+");");
+    else
+        mockedObject[methodName]= new Function(
+                "return this.mock.onMethodCalled(\""+methodName+"\");");
+}
+
+return mockedObject;
+]]>
+    </Verbatim>
+  </Procedure>

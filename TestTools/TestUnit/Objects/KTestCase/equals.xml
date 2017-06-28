@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="equals"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <ObjectField
+        name="objectToCompare">
+      <TypeDefinitionReference
+          name="ObjectField"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <BooleanField
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(!objectToCompare && getTypeName() != objectToCompare.getTypeName())
+    return false;
+else
+    return name == objectToCompare.name;
+]]>
+    </Verbatim>
+  </Procedure>

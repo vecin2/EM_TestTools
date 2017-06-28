@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE InterfaceDefinition [] >
+  <PackageEntry>
+    <InterfaceDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="IMockedObject"
+        nested="false"
+        version="4.1.0">
+      <ClassFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="mock">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="Mock"
+              nested="false" />
+        </ObjectField>
+      </ClassFields>
+      <ClassProcedureSignatures
+          name="" />
+      <InstanceProcedureSignatures
+          name="" />
+      <ClassFieldSignatures
+          name="" />
+      <InstanceFieldSignatures
+          name="" />
+    </InterfaceDefinition>
+  </PackageEntry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="runTestMethod"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <StringField
+        designNotes=""
+        length="0"
+        name="testName" />
+    <Verbatim
+        fieldName="text">
+<![CDATA[configAssertor(testName)
+this.setUp();
+this[testName]();
+this.tearDown();
+]]>
+    </Verbatim>
+  </Procedure>

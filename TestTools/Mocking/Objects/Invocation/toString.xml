@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="toString"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <StringField
+          designNotes=""
+          length="0"
+          name="argsToString" />
+    </ProcedureLocals>
+    <ResultType>
+      <StringField
+          designNotes=""
+          length="0"
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[return getObjectName()+"."+ methodName+"("+ReflectionUtil.toString(args)+")";
+]]>
+    </Verbatim>
+  </Procedure>

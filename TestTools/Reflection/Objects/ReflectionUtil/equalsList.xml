@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="equalsList"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="iterator1">
+        <TypeDefinitionReference
+            name="GTListIterator"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="iterator2">
+        <TypeDefinitionReference
+            name="GTListIterator"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="element1">
+        <TypeDefinitionReference
+            name="GTObject"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="element2">
+        <TypeDefinitionReference
+            name="GTObject"
+            nested="false" />
+      </ObjectField>
+      <BooleanField
+          name="stillEquals" />
+    </ProcedureLocals>
+    <ObjectField
+        name="object1">
+      <TypeDefinitionReference
+          name="GTList"
+          nested="false" />
+    </ObjectField>
+    <ObjectField
+        name="object2">
+      <TypeDefinitionReference
+          name="GTList"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <BooleanField
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[ iterator1 = object1.iterator();
+iterator2 = object2.iterator();
+while(iterator1.hasNext() && iterator2.hasNext()){
+    element1 = iterator1.next();
+    element2 = iterator2.next();
+    stillEquals = equals(element1, element2);
+    if(!stillEquals)
+        return false;
+}
+return !iterator1.hasNext() && !iterator2.hasNext();
+]]>
+    </Verbatim>
+  </Procedure>

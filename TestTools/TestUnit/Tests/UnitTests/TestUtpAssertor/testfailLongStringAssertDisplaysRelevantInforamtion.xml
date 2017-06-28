@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testfailLongStringAssertDisplaysRelevantInforamtion"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="mockedUtp">
+        <TypeDefinitionReference
+            name="GTUnitTestProcess"
+            nested="false" />
+      </ObjectField>
+      <StringField
+          designNotes=""
+          length="0"
+          name="expectedMessage" />
+      <StringField
+          designNotes=""
+          length="0"
+          name="expectedLongString1" />
+      <StringField
+          designNotes=""
+          length="0"
+          name="actualLongString2" />
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[//we use the same class because UtpAssertor is a wrapper of GTUnitTestProcess and has the same interface
+//The mock would not work if we pass the GTUnitTestPRocess
+mockedUtp = Mock.createMock(UtpAssertor);
+utpAssertor = new UtpAssertor(mockedUtp);
+
+expectedLongString1="[[textfield:txtName, background:#FFDDEE, enabled:true],[textfield:txtName, background:#FFDDEE, enabled:true]]";
+actualLongString2="[[textfield:txtName, background:#FFDDEE, enabled:true],[textfield:txtName, background:#FFDDEE, enabled:false]]";
+expectedMessage= "-->expected: ...],[textfield:txtName, background:#FFDDEE, enabled:true]]-->but was: ...],[textfield:txtName, background:#FFDDEE, enabled:false]]";
+
+mockedUtp.assert(true);
+mockedUtp.assertEquals(expectedLongString1,actualLongString2, expectedMessage);
+
+Mock.replay(mockedUtp);
+utpAssertor.assertEquals(expectedLongString1,actualLongString2);
+
+Mock.verify(mockedUtp, getAssertor().utp);
+]]>
+    </Verbatim>
+  </Procedure>

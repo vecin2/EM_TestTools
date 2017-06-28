@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConstructionProcedure [] >
+  <ConstructionProcedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="Invocation"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <StringField
+        designNotes=""
+        length="0"
+        name="objectPath" />
+    <StringField
+        designNotes=""
+        length="0"
+        name="methodName" />
+    <ObjectField
+        name="args">
+      <TypeDefinitionReference
+          name="GTList"
+          nested="false" />
+    </ObjectField>
+    <Verbatim
+        fieldName="text">
+<![CDATA[this.objectPath = objectPath;
+this.methodName = methodName;
+this.args = args;
+]]>
+    </Verbatim>
+  </ConstructionProcedure>

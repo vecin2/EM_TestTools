@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="hasEqualsMethod"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <ObjectField
+        designNotes=""
+        name="objectToCheck">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <BooleanField
+          designNotes=""
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(GTObject.isNullOrUndefined(objectToCheck) ||  typeof(objectToCheck) != "object"){
+    return false;
+}
+return !GTObject.isNullOrUndefined(objectToCheck.equals(objectToCheck));
+]]>
+    </Verbatim>
+  </Procedure>

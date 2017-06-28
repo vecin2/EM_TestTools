@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="testPassesWhenSameWithNoArgsIsInvoked"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator =Mock.createMock(Collaborator);
+collaborator.save();
+Mock.replay(collaborator);
+
+
+collaborator.save();
+
+assertEquals(null,
+            Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+    <ReferenceParameters />
+    <ProcedureLocals />
+  </Procedure>

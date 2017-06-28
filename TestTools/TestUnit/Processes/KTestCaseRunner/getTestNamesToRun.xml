@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="getTestNamesToRun"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[testNamesIterator = testCase.getTestsToRun().iterator();
+]]>
+    </Verbatim>
+    <ReferenceParameters />
+    <ProcedureLocals />
+  </Procedure>

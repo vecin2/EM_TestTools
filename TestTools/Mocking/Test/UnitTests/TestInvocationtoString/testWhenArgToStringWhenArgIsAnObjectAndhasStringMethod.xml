@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testWhenArgToStringWhenArgIsAnObjectAndhasStringMethod"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="collaborator">
+        <TypeDefinitionReference
+            name="Collaborator"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          designNotes=""
+          name="params">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator = new Collaborator("Collaborator number 1");
+params = new GTList();
+params.add(collaborator);
+invocation = new Invocation(Collaborator.getFullyQualifiedName(),"logRemoved",params);
+
+assertEquals("Collaborator.logRemoved(Collaborator[name=Collaborator number 1])", invocation.toString());
+]]>
+    </Verbatim>
+  </Procedure>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="KTestCase">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCase" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="GTFileUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="FrameworkCommon" />
+        <PackageName
+            name="API" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="GTFileUtil" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="KTestSuite">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestSuite" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="Mock">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="Mock" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ObjectRepository">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ObjectRepository" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="TestBuildTestSuiteFromPackage"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="KTestCase"
+          nested="false" />
+      <InstanceFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="testSuite">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="KTestSuite"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="objectRepository">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="ObjectRepository"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="testRunsNothingWhenNoTests"
+            nested="true" />
+        <Procedure
+            name="testRunsMultipleTestCases"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

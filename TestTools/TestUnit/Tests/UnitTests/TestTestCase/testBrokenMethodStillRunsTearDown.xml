@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testBrokenMethodStillRunsTearDown"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[wasRun = new WasRun("testBrokenMethod");
+wasRun.expectException(new Exception("Just a broken method"));
+wasRun.run(this);
+getAssertor().assertEquals("setUp testBrokenMethod tearDown ",wasRun.log);
+]]>
+    </Verbatim>
+  </Procedure>

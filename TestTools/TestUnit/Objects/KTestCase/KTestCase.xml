@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConstructionProcedure [] >
+  <ConstructionProcedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="KTestCase"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <StringField
+        designNotes=""
+        length="0"
+        name="name" />
+    <ObjectField
+        name="assertor">
+      <TypeDefinitionReference
+          name="UtpAssertor"
+          nested="false" />
+    </ObjectField>
+    <Verbatim
+        fieldName="text">
+<![CDATA[this.name = name;
+this.assertor = assertor
+]]>
+    </Verbatim>
+  </ConstructionProcedure>

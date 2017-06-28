@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="1"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="run"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <ObjectField
+        designNotes=""
+        name="assertor">
+      <TypeDefinitionReference
+          name="GTUnitTestProcess"
+          nested="false" />
+    </ObjectField>
+    <Verbatim
+        fieldName="text">
+<![CDATA[//one assertion needs to be made against the Unit test process: otherwise it shows an error:
+            //'exited without recording any results; most probably it crashed.'
+if(!this.assertor){
+    this.assertor =  new UtpAssertor(assertor);
+    configAssertor(null);
+    this.assertor.setStopOnFailure(false);
+
+}
+runTestMethodList();
+]]>
+    </Verbatim>
+    <ExceptionHandler
+        name=""
+        procedure="handleException"
+        version="">
+      <ExceptionDefinitionReference
+          name="Exception"
+          nested="false" />
+    </ExceptionHandler>
+  </Procedure>

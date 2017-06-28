@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="findUnexpectedInvocation"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <ResultType>
+      <ObjectField
+          name="">
+        <TypeDefinitionReference
+            name="Invocation"
+            nested="false" />
+      </ObjectField>
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[for(var i=0; i<actualInvocations.size(); i++){
+    if(!expectedInvocations.containsInvocation(actualInvocations.get(i)))
+        return actualInvocations.get(i);
+}
+return null;
+]]>
+    </Verbatim>
+  </Procedure>

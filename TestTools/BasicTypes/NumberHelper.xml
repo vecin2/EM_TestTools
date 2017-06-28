@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="NumberUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="FrameworkCommon" />
+        <PackageName
+            name="API" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="NumberUtil" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="NumberHelper"
+        nested="false"
+        version="4.1.0">
+      <ClassProcedures
+          name="">
+        <Procedure
+            name="isNumber"
+            nested="true" />
+      </ClassProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

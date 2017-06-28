@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="Collaborator"
+        nested="false"
+        version="4.1.0">
+      <InstanceFields>
+        <StringField
+            designNotes=""
+            isAttribute="false"
+            length="0"
+            name="name">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+      </InstanceFields>
+      <ConstructionProcedure
+          name="Collaborator"
+          nested="true" />
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="documentAdded"
+            nested="true" />
+        <Procedure
+            name="updated"
+            nested="true" />
+        <Procedure
+            name="equals"
+            nested="true" />
+        <Procedure
+            name="toString"
+            nested="true" />
+        <Procedure
+            name="logRemove"
+            nested="true" />
+        <Procedure
+            name="computeTotal"
+            nested="true" />
+        <Procedure
+            name="save"
+            nested="true" />
+        <Procedure
+            name="workingWithList"
+            nested="true" />
+        <Procedure
+            name="computeSomething"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

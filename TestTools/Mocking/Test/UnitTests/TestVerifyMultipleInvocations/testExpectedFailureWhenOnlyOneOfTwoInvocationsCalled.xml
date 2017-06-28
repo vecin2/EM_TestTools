@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testExpectedFailureWhenOnlyOneOfTwoInvocationsCalled"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator = Mock.createMock(Collaborator);
+
+collaborator.documentAdded("New document");
+collaborator.documentAdded("New document");
+
+Mock.replay(collaborator);
+
+collaborator.documentAdded("New document");
+
+assertEquals("Expectation failure on verify: "+
+    "Collaborator.documentAdded(\"New document\"): expected: 2, actual: 1", Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+  </Procedure>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testThrowsExpectedException_assertTrue"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="mockUtpAssertor">
+        <TypeDefinitionReference
+            name="UtpAssertor"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[mockUtpAssertor =  Mock.createMock(UtpAssertor);
+Mock.expect(mockUtpAssertor.assertTrue(true));
+Mock.expect(mockUtpAssertor.setTestName("TestTools.TestUnit.Tests.Objects.WasRunTestException__testWhichThrowsTheExpectedException"));
+Mock.replay(mockUtpAssertor);
+
+wasRun = new WasRunTestException("testWhichThrowsTheExpectedException", mockUtpAssertor);
+wasRun.run(this);
+
+Mock.verify(mockUtpAssertor,this);
+]]>
+    </Verbatim>
+  </Procedure>

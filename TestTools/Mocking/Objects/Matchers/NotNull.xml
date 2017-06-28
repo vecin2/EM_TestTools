@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="IArgumentMatcher">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="IArgumentMatcher" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="NotNull"
+        nested="false"
+        version="4.1.0">
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="matches"
+            nested="true" />
+        <Procedure
+            name="toString"
+            nested="true" />
+      </InstanceProcedures>
+      <ParentInterfaces
+          name="">
+        <InterfaceDefinitionReference
+            name="IArgumentMatcher"
+            nested="false" />
+      </ParentInterfaces>
+    </ObjectDefinition>
+  </PackageEntry>

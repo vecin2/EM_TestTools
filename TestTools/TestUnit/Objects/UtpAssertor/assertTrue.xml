@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="assertTrue"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <BooleanField
+        name="condition" />
+    <StringField
+        length="0"
+        name="message" />
+    <Verbatim
+        fieldName="text">
+<![CDATA[utp.assertTrue(condition, message);
+]]>
+    </Verbatim>
+  </Procedure>

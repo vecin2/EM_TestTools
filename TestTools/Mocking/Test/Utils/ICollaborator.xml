@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE InterfaceDefinition [] >
+  <PackageEntry>
+    <InterfaceDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="ICollaborator"
+        nested="false"
+        version="4.1.0">
+      <ClassProcedureSignatures
+          name="">
+        <ProcedureSignature
+            designNotes="? No Design Notes ?"
+            name="loadById"
+            nested="true">
+          <ParameterList
+              name="">
+            <IntegerField
+                isAttribute="false"
+                name="id">
+              <IntegerField_loc
+                  locale="">
+                <Format />
+              </IntegerField_loc>
+            </IntegerField>
+          </ParameterList>
+          <ProcedureResult
+              name="">
+            <ObjectField
+                isAggregate="false"
+                isAttribute="false"
+                name="">
+              <ObjectField_loc
+                  locale="">
+                <Format />
+              </ObjectField_loc>
+              <TypeDefinitionReference
+                  name="ICollaborator"
+                  nested="false" />
+            </ObjectField>
+          </ProcedureResult>
+        </ProcedureSignature>
+      </ClassProcedureSignatures>
+      <InstanceProcedureSignatures
+          name="">
+        <ProcedureSignature
+            designNotes="? No Design Notes ?"
+            name="save"
+            nested="true">
+          <ParameterList
+              name="" />
+        </ProcedureSignature>
+        <ProcedureSignature
+            designNotes="? No Design Notes ?"
+            name="documentAdded"
+            nested="true">
+          <ParameterList
+              name="">
+            <StringField
+                isAttribute="false"
+                length="0"
+                name="name">
+              <StringField_loc
+                  locale="">
+                <Format />
+              </StringField_loc>
+            </StringField>
+          </ParameterList>
+        </ProcedureSignature>
+        <ProcedureSignature
+            designNotes="? No Design Notes ?"
+            name="equals"
+            nested="true">
+          <ParameterList
+              name="">
+            <ObjectField
+                isAggregate="false"
+                isAttribute="false"
+                name="other">
+              <ObjectField_loc
+                  locale="">
+                <Format />
+              </ObjectField_loc>
+              <TypeDefinitionReference
+                  name="ICollaborator"
+                  nested="false" />
+            </ObjectField>
+          </ParameterList>
+        </ProcedureSignature>
+      </InstanceProcedureSignatures>
+      <ClassFieldSignatures
+          name="" />
+      <InstanceFieldSignatures
+          name="" />
+    </InterfaceDefinition>
+  </PackageEntry>

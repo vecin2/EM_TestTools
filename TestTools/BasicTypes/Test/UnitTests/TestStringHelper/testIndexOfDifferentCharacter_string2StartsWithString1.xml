@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="testIndexOfDifferentCharacter_string2StartsWithString1"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[assertEquals(4, StringHelper.indexOfDifferentCharacter("hell","hello"));
+]]>
+    </Verbatim>
+    <ReferenceParameters />
+    <ProcedureLocals />
+  </Procedure>

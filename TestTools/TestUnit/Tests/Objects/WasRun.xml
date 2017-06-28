@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="KTestCase">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCase" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="WasRun"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="KTestCase"
+          nested="false" />
+      <InstanceFields>
+        <StringField
+            designNotes=""
+            isAttribute="false"
+            length="0"
+            name="log">
+          <StringField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[""]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </StringField_loc>
+        </StringField>
+      </InstanceFields>
+      <ConstructionProcedure
+          name="WasRun"
+          nested="true" />
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="testMethod"
+            nested="true" />
+        <Procedure
+            name="setUp"
+            nested="true" />
+        <Procedure
+            name="tearDown"
+            nested="true" />
+        <Procedure
+            name="testBrokenMethod"
+            nested="true" />
+        <Procedure
+            name="throwGenericException"
+            nested="true" />
+        <Procedure
+            name="testThrowInviteCancelledException"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

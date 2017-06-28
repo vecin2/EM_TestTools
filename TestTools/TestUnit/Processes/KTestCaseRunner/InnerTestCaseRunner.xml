@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE UnitTestProcess [] >
+  <UnitTestProcess
+      appearsInHistory="true"
+      cyclic="false"
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      icon=""
+      isPrivate="false"
+      logicalDatabaseConnection=""
+      name="InnerTestCaseRunner"
+      nested="false"
+      pointOfNoReturn="false"
+      targetPackage=""
+      transactionBehaviour="TX_NOT_SUPPORTED"
+      version="4.1.0"
+      waitOnChildren="false">
+    <InstanceFields>
+      <IntegerField
+          isAttribute="false"
+          name="numberOfAssertions">
+        <IntegerField_loc
+            locale="">
+          <Format />
+          <JavascriptFunction
+              exceptionStrategy="0"
+              language="EcmaScript"
+              name=""
+              version="">
+            <Verbatim
+                fieldName="text">
+<![CDATA[1]]>
+            </Verbatim>
+          </JavascriptFunction>
+        </IntegerField_loc>
+      </IntegerField>
+      <ObjectField
+          designNotes=""
+          isAggregate="false"
+          isAttribute="false"
+          name="testCase">
+        <ObjectField_loc
+            locale="">
+          <Format />
+        </ObjectField_loc>
+        <TypeDefinitionReference
+            name="KTestCase"
+            nested="false" />
+      </ObjectField>
+      <StringField
+          designNotes=""
+          isAttribute="false"
+          length="0"
+          name="testName">
+        <StringField_loc
+            locale="">
+          <Format />
+        </StringField_loc>
+      </StringField>
+      <IntegerField
+          designNotes=""
+          isAttribute="false"
+          name="index">
+        <IntegerField_loc
+            locale="">
+          <Format />
+        </IntegerField_loc>
+      </IntegerField>
+    </InstanceFields>
+    <InstanceProcedures
+        name="">
+      <Procedure
+          name="setUp"
+          nested="true" />
+      <Procedure
+          name="test"
+          nested="true" />
+    </InstanceProcedures>
+    <StartNode
+        displayName=""
+        name=""
+        x="16"
+        y="32" />
+    <EndNode
+        displayName=""
+        name=""
+        x="240"
+        y="32" />
+    <ProcedureCall
+        builtIn="false"
+        classMethod="false"
+        displayName=""
+        methodName="test"
+        name="test"
+        resultType=""
+        type="UnitTestProcess"
+        x="122"
+        y="73">
+      <RecordDefinitionReference
+          name="InnerTestCaseRunner"
+          nested="false" />
+    </ProcedureCall>
+    <Transition
+        isExceptionTransition="false">
+      <StartNodeReference
+          name="" />
+      <ToNode
+          name="test" />
+      <GraphNodeList
+          name="">
+        <GraphNode
+            icon=""
+            isLabelHolder="true"
+            label=""
+            name=""
+            x="128"
+            y="32" />
+      </GraphNodeList>
+    </Transition>
+    <Transition
+        isExceptionTransition="false"
+        name="transition0">
+      <FromNode
+          name="test" />
+      <EndNodeReference
+          name="" />
+      <GraphNodeList
+          name="">
+        <GraphNode
+            icon=""
+            isLabelHolder="true"
+            label=""
+            name=""
+            x="176"
+            y="48" />
+      </GraphNodeList>
+    </Transition>
+    <Parameter
+        from=""
+        name="testCase"
+        to="" />
+    <Parameter
+        from=""
+        name="testName"
+        to="" />
+    <Parameter
+        from=""
+        name="index"
+        to="" />
+    <BuilderInfo
+        name="" />
+    <TopicScope
+        defineTopicScope="false"
+        name="" />
+    <OnExitProcedure
+        name="onExit"
+        nested="true" />
+  </UnitTestProcess>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testverifyPassesWhenStringArgIsTheSame"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator =Mock.createMock(Collaborator);
+collaborator.documentAdded("New Document");
+Mock.replay(collaborator);
+
+collaborator.documentAdded("New Document")
+
+assertEquals(null, Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+  </Procedure>

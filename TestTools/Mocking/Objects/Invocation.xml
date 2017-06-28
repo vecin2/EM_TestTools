@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="ReflectionUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ReflectionUtil" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="Invocation"
+        nested="false"
+        version="4.1.0">
+      <InstanceFields>
+        <StringField
+            designNotes=""
+            isAttribute="false"
+            length="0"
+            name="methodName">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="args">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="GTList"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="returnValue">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="GTObject"
+              nested="false" />
+        </ObjectField>
+        <StringField
+            designNotes=""
+            isAttribute="false"
+            length="0"
+            name="objectPath">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="exceptionToThrow">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="Exception"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <ConstructionProcedure
+          name="Invocation"
+          nested="true" />
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="equals"
+            nested="true" />
+        <Procedure
+            name="toString"
+            nested="true" />
+        <Procedure
+            name="setReturnValue"
+            nested="true" />
+        <Procedure
+            name="getObjectName"
+            nested="true" />
+        <Procedure
+            name="setExceptionToThrow"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="test"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="testObjectRepository">
+        <TypeDefinitionReference
+            name="TestObjectRepository"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[testObjectRepository =new TestObjectRepository();
+
+testObjectRepository.run(this);
+]]>
+    </Verbatim>
+  </Procedure>

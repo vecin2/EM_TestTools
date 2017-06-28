@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="stringify"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <ObjectField
+        name="toStringify">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <StringField
+          length="0"
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(toStringify.toString())
+    return toStringify.toString();
+else
+    return toStringify+"";
+]]>
+    </Verbatim>
+  </Procedure>

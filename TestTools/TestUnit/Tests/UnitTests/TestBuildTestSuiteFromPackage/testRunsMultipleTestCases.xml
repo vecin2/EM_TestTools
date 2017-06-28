@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testRunsMultipleTestCases"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="expectedTestSuite">
+        <TypeDefinitionReference
+            name="KTestSuite"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[objectRepository = Mock.createMock(ObjectRepository);
+
+expectedTestSuite = new KTestSuite();
+expectedTestSuite.add(new TestExpectedException())
+                 .add(new TestTestCase());
+
+
+Mock.expect(objectRepository.listTestCases("/TestTools/TestUnit/Tests/")).andReturn(expectedTestSuite.getTestCases());
+
+Mock.replay(objectRepository);
+
+testSuite = KTestSuite.buildFromPackage("/TestTools/TestUnit/Tests/", objectRepository);
+
+assertEquals(expectedTestSuite, testSuite);
+]]>
+    </Verbatim>
+  </Procedure>

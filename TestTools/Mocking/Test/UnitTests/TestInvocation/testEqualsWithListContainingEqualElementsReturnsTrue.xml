@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testEqualsWithListContainingEqualElementsReturnsTrue"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="params1">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="params2">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="collabList1">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="collabList2">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="invocation1">
+        <TypeDefinitionReference
+            name="Invocation"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="invocation2">
+        <TypeDefinitionReference
+            name="Invocation"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[collabList1 = new GTList();
+collabList1.add(new Collaborator("collab"));
+params1 = new GTList();
+params1.add(collabList1);
+invocation1 = new Invocation(Collaborator.getFullyQualifiedName(),"workingWithList",params1);
+
+collabList2 = new GTList();
+collabList2.add(new Collaborator("collab"));
+params2 = new GTList();
+params2.add(collabList2);
+invocation2 = new Invocation(Collaborator.getFullyQualifiedName(),"workingWithList",params2);
+
+
+assertEquals(true, invocation1.equals(invocation2));
+]]>
+    </Verbatim>
+  </Procedure>

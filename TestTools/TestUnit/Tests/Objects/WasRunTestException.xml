@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="KTestCase">
+      <PackageSpecifier>
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCase" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        name="WasRunTestException"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="KTestCase"
+          nested="false" />
+      <InstanceFields>
+        <StringField
+            designNotes=""
+            isAttribute="false"
+            length="0"
+            name="log">
+          <StringField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[""]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </StringField_loc>
+        </StringField>
+      </InstanceFields>
+      <ConstructionProcedure
+          exceptionStrategy="0"
+          isPending="false"
+          language="EcmaScript"
+          name="WasRunTestException"
+          nested="true" />
+      <InstanceProcedures>
+        <Procedure
+            exceptionStrategy="0"
+            isPending="false"
+            language="EcmaScript"
+            name="testMethod"
+            nested="true" />
+        <Procedure
+            exceptionStrategy="0"
+            isPending="false"
+            language="EcmaScript"
+            name="setUp"
+            nested="true" />
+        <Procedure
+            exceptionStrategy="0"
+            isPending="false"
+            language="EcmaScript"
+            name="tearDown"
+            nested="true" />
+        <Procedure
+            exceptionStrategy="0"
+            isPending="false"
+            language="EcmaScript"
+            name="testWhichThrowsAnExceptionButExceptADifferentOne"
+            nested="true" />
+        <Procedure
+            exceptionStrategy="0"
+            isPending="false"
+            language="EcmaScript"
+            name="throwGenericException"
+            nested="true" />
+        <Procedure
+            exceptionStrategy="0"
+            isPending="false"
+            language="EcmaScript"
+            name="testWhichThrowsTheExpectedException"
+            nested="true" />
+        <Procedure
+            exceptionStrategy="0"
+            isPending="false"
+            language="EcmaScript"
+            name="testWhichThrowsAnExceptionOfTypeExcpectedButDifMsg"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE UnitTestProcess [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="KTestSuite">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestSuite" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="KTestCaseRunner">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Processes" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCaseRunner" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="TestExpectedException">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Tests" />
+        <PackageName
+            name="UnitTests" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="TestExpectedException" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="TestRunAllTestsEvenIfExceptionsIsThrown">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Tests" />
+        <PackageName
+            name="UnitTests" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="TestRunAllTestsEvenIfExceptionsIsThrown" />
+    </ImportDeclaration>
+    <UnitTestProcess
+        appearsInHistory="true"
+        cyclic="false"
+        designNotes="Undefined"
+        exceptionStrategy="1"
+        icon=""
+        isPrivate="false"
+        logicalDatabaseConnection=""
+        name="OneTestAtTimeRunner"
+        nested="false"
+        pointOfNoReturn="false"
+        targetPackage=""
+        transactionBehaviour="TX_NOT_SUPPORTED"
+        version="4.1.0"
+        waitOnChildren="false">
+      <InstanceFields>
+        <IntegerField
+            isAttribute="false"
+            name="numberOfAssertions">
+          <IntegerField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[0]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </IntegerField_loc>
+        </IntegerField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="testSuite">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="KTestSuite"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="test"
+            nested="true" />
+      </InstanceProcedures>
+      <StartNode
+          displayName=""
+          name=""
+          x="22"
+          y="64" />
+      <EndNode
+          displayName=""
+          name=""
+          x="502"
+          y="64" />
+      <ProcedureCall
+          builtIn="false"
+          classMethod="false"
+          displayName=""
+          methodName="test"
+          name="test1"
+          resultType=""
+          type="UnitTestProcess"
+          x="352"
+          y="80">
+        <RecordDefinitionReference
+            name="OneTestAtTimeRunner"
+            nested="false" />
+      </ProcedureCall>
+      <Transition
+          isExceptionTransition="false"
+          name="transition0">
+        <StartNodeReference
+            name="" />
+        <ToNode
+            name="test1" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="176"
+              y="64" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition3">
+        <FromNode
+            name="test1" />
+        <EndNodeReference
+            name="" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="416"
+              y="80" />
+        </GraphNodeList>
+      </Transition>
+      <BuilderInfo
+          name="" />
+      <TopicScope
+          defineTopicScope="false"
+          name="" />
+    </UnitTestProcess>
+  </PackageEntry>

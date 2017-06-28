@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="toString"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="iterator">
+        <TypeDefinitionReference
+            name="GTIterator"
+            nested="false" />
+      </ObjectField>
+      <StringField
+          designNotes=""
+          length="0"
+          name="result" />
+    </ProcedureLocals>
+    <ObjectField
+        designNotes=""
+        name="objectToStringify">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <StringField
+          designNotes=""
+          length="0"
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[result ="";
+if(GTObject.isNull(objectToStringify))
+    result += "null";
+    else if (GTObject.isUndefined(objectToStringify))
+        result += "undefined";
+else{
+if(hasIteratorMethod(objectToStringify)){
+    iterator = objectToStringify.iterator();
+    while(iterator.hasNext()){
+       result += toString(iterator.next())
+       if(iterator.hasNext())
+           result+=", ";
+    }
+}
+else{
+    result  = doToString(objectToStringify);
+}
+}
+return result
+]]>
+    </Verbatim>
+  </Procedure>

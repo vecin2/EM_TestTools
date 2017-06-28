@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportPackageDeclaration>
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Tests" />
+      </PackageSpecifier>
+    </ImportPackageDeclaration>
+    <ImportDeclaration
+        name="KTestCase">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCase" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ObjectRepository">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ObjectRepository" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="KTestCaseList">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCaseList" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ExampleKTestCase1">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Tests" />
+        <PackageName
+            name="Utils" />
+        <PackageName
+            name="OnlyTestProcesses" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ExampleKTestCase1" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ExampleKTestCase2">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Tests" />
+        <PackageName
+            name="Utils" />
+        <PackageName
+            name="OnlyTestProcesses" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ExampleKTestCase2" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="UnitTestCase5">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Tests" />
+        <PackageName
+            name="Utils" />
+        <PackageName
+            name="ContainsObjectsMixed" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="UnitTestCase5" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ExampleKTestCase3">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Tests" />
+        <PackageName
+            name="Utils" />
+        <PackageName
+            name="ContainsObjectsMixed" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ExampleKTestCase3" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ExampleKTestCase4">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Tests" />
+        <PackageName
+            name="Utils" />
+        <PackageName
+            name="ContainsObjectsMixed" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ExampleKTestCase4" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="TestObjectRepository"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="KTestCase"
+          nested="false" />
+      <InstanceFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="objectRepository">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="ObjectRepository"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="testCaseList">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="KTestCaseList"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="testEmptyPackageReturnEmptyList"
+            nested="true" />
+        <Procedure
+            name="testPackageContainingOnlyTestProcesses"
+            nested="true" />
+        <Procedure
+            name="testPackageContainingObjectsMixed"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

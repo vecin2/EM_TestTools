@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="createMock"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="builder">
+        <TypeDefinitionReference
+            name="MockBuilder"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <ObjectField
+        designNotes=""
+        name="object">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <ObjectField
+          designNotes=""
+          name="">
+        <TypeDefinitionReference
+            name="GTObject"
+            nested="false" />
+      </ObjectField>
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[builder = new MockBuilder(object);
+return builder.createMock();
+]]>
+    </Verbatim>
+  </Procedure>

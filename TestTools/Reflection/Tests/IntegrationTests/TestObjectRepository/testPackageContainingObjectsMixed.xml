@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="testPackageContainingObjectsMixed"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[expectedCaseList = new GTList();
+expectedCaseList.add(new ExampleKTestCase4());
+expectedCaseList.add(new ExampleKTestCase3());
+
+objectRepository = new ObjectRepository();
+testCaseList = objectRepository.listTestCases("/TestTools/Reflection/Tests/Utils/ContainsObjectsMixed/");
+getAssertor().assertEqualList(expectedCaseList, testCaseList);
+]]>
+    </Verbatim>
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          isAggregate="false"
+          isAttribute="false"
+          name="expectedCaseList">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+  </Procedure>

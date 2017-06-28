@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="configAssertor"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <StringField
+          length="0"
+          name="reportingTestName" />
+    </ProcedureLocals>
+    <StringField
+        designNotes=""
+        length="0"
+        name="testName" />
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(testName){
+    reportingTestName = FileHelper.extractFolderName(this.getFullyQualifiedName(),".")+ "__"+testName
+
+    getAssertor().setTestName(FileHelper.extractParentFolder(this.getFullyQualifiedName(),".")+
+                              reportingTestName);
+}
+getAssertor().assertTrue(true);
+]]>
+    </Verbatim>
+  </Procedure>

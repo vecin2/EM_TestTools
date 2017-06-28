@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="handleExpectedException"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="unexpectedException">
+        <TypeDefinitionReference
+            name="UnexpectedException"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <ObjectField
+        name="exception">
+      <TypeDefinitionReference
+          name="Exception"
+          nested="false" />
+    </ObjectField>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if (expectedException.getFullyQualifiedName() != exception.getFullyQualifiedName() ||
+        expectedException.getErrorMessage() != exception.getErrorMessage()){
+    unexpectedException =new UnexpectedException("Expected "+expectedException.getFullyQualifiedName()+"('"+expectedException.getErrorMessage()+"')"+
+            " but was a "+exception.getFullyQualifiedName()+"('"+exception.getErrorMessage()+"')");
+
+    expectedException=null;
+    getAssertor().assert(false, unexpectedException.getErrorMessage());
+}
+]]>
+    </Verbatim>
+  </Procedure>

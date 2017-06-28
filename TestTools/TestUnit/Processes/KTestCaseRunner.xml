@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProcessDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="KTestCase">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="TestUnit" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="KTestCase" />
+    </ImportDeclaration>
+    <ProcessDefinition
+        appearsInHistory="true"
+        cyclic="false"
+        designNotes="Undefined"
+        exceptionStrategy="1"
+        icon=""
+        isPrivate="false"
+        logicalDatabaseConnection=""
+        name="KTestCaseRunner"
+        nested="false"
+        pointOfNoReturn="false"
+        transactionBehaviour="TX_NOT_SUPPORTED"
+        version="4.1.0"
+        waitOnChildren="false">
+      <InstanceFields>
+        <IntegerField
+            isAttribute="false"
+            name="numberOfAssertions">
+          <IntegerField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[0]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </IntegerField_loc>
+        </IntegerField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="testNamesIterator">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="GTListIterator"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="testCase">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="KTestCase"
+              nested="false" />
+        </ObjectField>
+        <IntegerField
+            designNotes=""
+            isAttribute="false"
+            name="next">
+          <IntegerField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[0]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </IntegerField_loc>
+        </IntegerField>
+      </InstanceFields>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="getTestNamesToRun"
+            nested="true" />
+      </InstanceProcedures>
+      <UnitTestProcess
+          name="InnerTestCaseRunner"
+          nested="true" />
+      <StartNode
+          displayName=""
+          name=""
+          x="22"
+          y="64" />
+      <EndNode
+          displayName=""
+          name=""
+          x="512"
+          y="48" />
+      <ChildProcess
+          displayName=""
+          executeAsAsynchronous="false"
+          name="innerTestCaseRunner"
+          waitOnParent="false"
+          x="688"
+          y="160">
+        <ProcessDefinitionReference
+            name="InnerTestCaseRunner"
+            nested="false" />
+      </ChildProcess>
+      <ThisNode
+          displayName=""
+          name="fieldStore0"
+          x="992"
+          y="224" />
+      <ProcedureCall
+          builtIn="false"
+          classMethod="false"
+          displayName=""
+          methodName="getTestNamesToRun"
+          name="getTestCasesToRun"
+          resultType=""
+          type="ProcessDefinition"
+          x="200"
+          y="161">
+        <RecordDefinitionReference
+            name="KTestCaseRunner"
+            nested="false" />
+      </ProcedureCall>
+      <DoNothingNode
+          displayName=""
+          name="checkCases"
+          x="304"
+          y="160" />
+      <AssignNode
+          displayName="next"
+          name="next"
+          x="544"
+          y="256">
+        <AssignElement
+            name="">
+          <AssignmentField
+              exceptionStrategy="0"
+              language="EcmaScript"
+              name=""
+              version="">
+            <Verbatim
+                fieldName="text">
+<![CDATA[next++]]>
+            </Verbatim>
+          </AssignmentField>
+          <AssignmentValue
+              exceptionStrategy="0"
+              language="EcmaScript"
+              name=""
+              version="" />
+        </AssignElement>
+      </AssignNode>
+      <Transition
+          isExceptionTransition="false"
+          name="transition0">
+        <StartNodeReference
+            name="" />
+        <ToNode
+            name="getTestCasesToRun" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="112"
+              y="160" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition3">
+        <FromNode
+            name="getTestCasesToRun" />
+        <ToNode
+            name="checkCases" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="240"
+              y="160" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="true"
+          name="transition2">
+        <FromNode
+            name="innerTestCaseRunner" />
+        <ToNode
+            name="next" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="688"
+              y="288" />
+        </GraphNodeList>
+        <ExceptionDefinitionReference
+            name="Exception"
+            nested="false" />
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition4">
+        <FromNode
+            name="innerTestCaseRunner" />
+        <ToNode
+            name="next" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="688"
+              y="256" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition1">
+        <FromNode
+            name="next" />
+        <ToNode
+            name="checkCases" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="304"
+              y="256" />
+        </GraphNodeList>
+      </Transition>
+      <OrSplitTransition
+          isExceptionTransition="false"
+          name="orsplit0"
+          x="400"
+          y="160">
+        <Condition
+            exceptionStrategy="0"
+            language="EcmaScript"
+            name=""
+            version="">
+          <Verbatim
+              fieldName="text">
+<![CDATA[testNamesIterator.hasNext()]]>
+          </Verbatim>
+        </Condition>
+        <FromNode
+            name="checkCases" />
+        <ToNode
+            name="innerTestCaseRunner" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="480"
+              y="160" />
+        </GraphNodeList>
+        <Transition
+            isExceptionTransition="false"
+            name="orsplit0_elseTransition">
+          <EndNodeReference
+              name="" />
+          <GraphNodeList
+              name="">
+            <GraphNode
+                icon=""
+                isLabelHolder="true"
+                label=""
+                name=""
+                x="400"
+                y="48" />
+          </GraphNodeList>
+        </Transition>
+      </OrSplitTransition>
+      <Parameter
+          from=""
+          name="testCase"
+          to="" />
+      <DataFlow>
+        <FromNode
+            name="fieldStore0" />
+        <ToNode
+            name="innerTestCaseRunner" />
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[testNamesIterator.next()]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="testName" />
+          </ToField>
+        </DataFlowEntry>
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[testCase]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="testCase" />
+          </ToField>
+        </DataFlowEntry>
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[next]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="index" />
+          </ToField>
+        </DataFlowEntry>
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="784"
+              y="224" />
+        </GraphNodeList>
+      </DataFlow>
+      <BuilderInfo
+          name="" />
+      <TopicScope
+          defineTopicScope="false"
+          name="" />
+    </ProcessDefinition>
+  </PackageEntry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testFailsWhenInvokedButNotExpected"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator = Mock.createMock(Collaborator);
+
+collaborator.logRemove(new Collaborator("collab1"));
+collaborator.documentAdded("New Document");
+collaborator.documentAdded("New Document");
+
+Mock.replay(collaborator);
+
+collaborator.documentAdded("New Document");
+collaborator.computeTotal(new Collaborator("collab1"), new Collaborator("collab2"));
+assertEquals("Unexpected method call "+
+    "Collaborator.computeTotal(Collaborator[name=collab1], Collaborator[name=collab2]): "+
+    "Collaborator.logRemove(Collaborator[name=collab1]): expected: 1, actual: 0 "+
+    "Collaborator.documentAdded(\"New Document\"): expected: 2, actual: 1", Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+  </Procedure>

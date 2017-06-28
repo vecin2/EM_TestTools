@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="test"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[testSuite = KTestSuite.buildFromPackage("/TestTools/Reflection/Tests/Utils/ContainsObjectsMixed/");
+testSuite = KTestSuite.buildFromPackage("/TestTools/TestUnit/Tests/UnitTests/");
+]]>
+    </Verbatim>
+  </Procedure>

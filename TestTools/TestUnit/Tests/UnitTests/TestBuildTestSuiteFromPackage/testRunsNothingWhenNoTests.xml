@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testRunsNothingWhenNoTests"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="testSuite">
+        <TypeDefinitionReference
+            name="KTestSuite"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="objectRepository">
+        <TypeDefinitionReference
+            name="ObjectRepository"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[objectRepository = Mock.createMock(ObjectRepository);
+Mock.expect(objectRepository.listTestCases()).andReturn(new GTList());
+
+testSuite = KTestSuite.buildFromPackage("/TestTools/TestUnit/Tests/", objectRepository);
+
+
+getAssertor().assertEquals(true, testSuite.isEmpty());
+]]>
+    </Verbatim>
+  </Procedure>

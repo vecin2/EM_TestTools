@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="PartialCollaborator"
+        nested="false"
+        version="4.1.0">
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="isMocked1"
+            nested="true" />
+        <Procedure
+            name="isMocked2"
+            nested="true" />
+        <Procedure
+            name="isMocked3"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

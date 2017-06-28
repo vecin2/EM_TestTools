@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConstructionProcedure [] >
+  <ConstructionProcedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="ExpectationSetter"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ObjectField
+        name="invocation">
+      <TypeDefinitionReference
+          name="Invocation"
+          nested="false" />
+    </ObjectField>
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[this.invocation = invocation;
+]]>
+    </Verbatim>
+  </ConstructionProcedure>

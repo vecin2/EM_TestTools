@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="equals"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="currentTestCasesIterator">
+        <TypeDefinitionReference
+            name="GTListIterator"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="otherTestCasesIterator">
+        <TypeDefinitionReference
+            name="GTListIterator"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="testSuiteToCompare">
+        <TypeDefinitionReference
+            name="KTestSuite"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <ObjectField
+        designNotes=""
+        name="objectToCompare">
+      <TypeDefinitionReference
+          name="ObjectField"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <BooleanField
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(getTypeName()!= objectToCompare.getTypeName())
+    return false;
+testSuiteToCompare = objectToCompare;
+currentTestCasesIterator = this.testCases.iterator();
+otherTestCasesIterator = testSuiteToCompare.testCases.iterator();
+while(currentTestCasesIterator.hasNext() && otherTestCasesIterator.hasNext()){
+    if(!currentTestCasesIterator.next().equals(otherTestCasesIterator.next()))
+        return false;
+}
+return !currentTestCasesIterator.hasNext() && !otherTestCasesIterator.hasNext();
+]]>
+    </Verbatim>
+  </Procedure>

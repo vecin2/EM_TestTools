@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testVerifyPassesWhenObjectInListAreEqualByMethod"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="collaboratorList">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="clonedList">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[ collaboratorList = new GTList();
+collaboratorList.add(new Collaborator("Collaborator 1"));
+
+clonedList = new GTList();
+clonedList.addAll(collaboratorList);
+
+collaborator = Mock.createMock(Collaborator);
+
+collaborator.workingWithList(collaboratorList);
+
+Mock.replay(collaborator);
+
+collaborator.workingWithList(clonedList);
+
+assertEquals(null, Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+  </Procedure>

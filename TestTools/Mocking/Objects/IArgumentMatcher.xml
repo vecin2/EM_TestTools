@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE InterfaceDefinition [] >
+  <PackageEntry>
+    <InterfaceDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="IArgumentMatcher"
+        nested="false"
+        version="4.1.0">
+      <ClassProcedureSignatures
+          name="" />
+      <InstanceProcedureSignatures
+          name="">
+        <ProcedureSignature
+            designNotes="? No Design Notes ?"
+            name="matches"
+            nested="true">
+          <ParameterList
+              name="">
+            <ObjectField
+                isAggregate="false"
+                isAttribute="false"
+                name="actual">
+              <ObjectField_loc
+                  locale="">
+                <Format />
+              </ObjectField_loc>
+              <TypeDefinitionReference
+                  name="GTObject"
+                  nested="false" />
+            </ObjectField>
+          </ParameterList>
+          <ProcedureResult
+              name="">
+            <BooleanField
+                isAttribute="false"
+                name="">
+              <BooleanField_loc
+                  locale="">
+                <Format />
+              </BooleanField_loc>
+            </BooleanField>
+          </ProcedureResult>
+        </ProcedureSignature>
+      </InstanceProcedureSignatures>
+      <ClassFieldSignatures
+          name="" />
+      <InstanceFieldSignatures
+          name="" />
+    </InterfaceDefinition>
+  </PackageEntry>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="getRelevantSubstring"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <StringField
+          length="0"
+          name="helper" />
+    </ProcedureLocals>
+    <StringField
+        designNotes=""
+        length="0"
+        name="string" />
+    <IntegerField
+        designNotes=""
+        name="charIndex" />
+    <IntegerField
+        designNotes=""
+        name="rangeLength" />
+    <ResultType>
+      <StringField
+          designNotes=""
+          length="0"
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[helper = new StringHelper(string);
+return helper.doGetRelevantSubstring(charIndex, rangeLength);
+]]>
+    </Verbatim>
+  </Procedure>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="LastInvocation"
+        nested="false"
+        version="4.1.0">
+      <ClassFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="lastInvocation">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="Invocation"
+              nested="false" />
+        </ObjectField>
+      </ClassFields>
+      <ClassProcedures
+          name="">
+        <Procedure
+            name="getLastInvocation"
+            nested="true" />
+        <Procedure
+            name="setLastInvocation"
+            nested="true" />
+        <Procedure
+            name="getLastExpectationSetter"
+            nested="true" />
+      </ClassProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="test"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="testSuite">
+        <TypeDefinitionReference
+            name="KTestSuite"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          designNotes=""
+          name="testCase">
+        <TypeDefinitionReference
+            name="TestTestCase"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[testSuite = new KTestSuite();
+
+testSuite.add(new TestTestCase("testTemplateMethod"));
+testSuite.add(new TestTestCase("testBrokenMethodStillRunsTearDown"));
+testSuite.add(new TestTestCase("testRunAllMethodsWithinTestCase"));
+//No passign an specific methodName will run all tests methods within the class
+testSuite.add(new TestBuildTestSuiteFromPackage());
+testSuite.add(new TestExpectedException());
+testSuite.add(new TestUtpAssertor());
+
+testSuite.run(this);
+]]>
+    </Verbatim>
+  </Procedure>

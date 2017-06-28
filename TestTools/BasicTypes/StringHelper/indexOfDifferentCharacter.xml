@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="indexOfDifferentCharacter"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <StringField
+        designNotes=""
+        length="0"
+        name="string1" />
+    <StringField
+        designNotes=""
+        length="0"
+        name="string2" />
+    <ResultType>
+      <IntegerField
+          designNotes=""
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(string1 == string2)
+    return -1;
+if(GTObject.isNullOrUndefined(string1) || GTObject.isNullOrUndefined(string2))
+    return 0;
+var i;
+for(i=0; i< string1.length; i++){
+    if(string1.charAt(i)!=string2.charAt(i))
+        return i;
+}
+return i;
+]]>
+    </Verbatim>
+  </Procedure>

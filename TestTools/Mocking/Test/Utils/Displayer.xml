@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="Displayer"
+        nested="false"
+        version="4.1.0">
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="display"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ExceptionDefinition [] >
+  <PackageEntry>
+    <ExceptionDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="SomeException"
+        nested="false"
+        version="4.1.0">
+      <Superclass
+          name="Exception"
+          nested="false" />
+      <ConstructionProcedure
+          name="SomeException"
+          nested="true" />
+    </ExceptionDefinition>
+  </PackageEntry>

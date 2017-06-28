@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="testPackageContainingOnlyTestProcesses"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[expectedCaseList = new GTList();
+expectedCaseList.add(new ExampleKTestCase1());
+expectedCaseList.add(new ExampleKTestCase2());
+
+objectRepository = new ObjectRepository();
+testCaseList = objectRepository.listTestCases("/TestTools/Reflection/Tests/Utils/OnlyTestProcesses/");
+getAssertor().assertEqualList(expectedCaseList, testCaseList);
+]]>
+    </Verbatim>
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          isAggregate="false"
+          isAttribute="false"
+          name="expectedCaseList">
+        <TypeDefinitionReference
+            name="KTestCaseList"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+  </Procedure>

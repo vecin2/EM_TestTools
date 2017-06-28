@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportPackageDeclaration>
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Utils" />
+      </PackageSpecifier>
+    </ImportPackageDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="StringHelper"
+        nested="false"
+        version="4.1.0">
+      <InstanceFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="string">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="String"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <ConstructionProcedure
+          name="StringHelper"
+          nested="true" />
+      <ClassProcedures
+          name="">
+        <Procedure
+            name="stringify"
+            nested="true" />
+        <Procedure
+            name="indexOfDifferentCharacter"
+            nested="true" />
+        <Procedure
+            name="getRelevantSubstring"
+            nested="true" />
+      </ClassProcedures>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="getStartIndex"
+            nested="true" />
+        <Procedure
+            name="getEndIndex"
+            nested="true" />
+        <Procedure
+            name="getPrefix"
+            nested="true" />
+        <Procedure
+            name="doGetRelevantSubstring"
+            nested="true" />
+        <Procedure
+            name="getSuffix"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

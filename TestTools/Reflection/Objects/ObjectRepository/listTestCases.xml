@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="listTestCases"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="testCases">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          designNotes=""
+          name="files">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          designNotes=""
+          name="iterator">
+        <TypeDefinitionReference
+            name="GTListIterator"
+            nested="false" />
+      </ObjectField>
+      <StringField
+          designNotes=""
+          length="0"
+          name="fullFilePath" />
+      <ObjectField
+          name="object">
+        <TypeDefinitionReference
+            name="GTObject"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <StringField
+        designNotes=""
+        length="0"
+        name="packageRepositoryPath" />
+    <ResultType>
+      <ObjectField
+          designNotes=""
+          name="">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[testCases = new GTList();
+files =listFiles(packageRepositoryPath);
+iterator = files.iterator();
+while (iterator.hasNext()){
+    fullFilePath = iterator.next();
+    object = createInstance(computeFullyQualifiedName(fullFilePath));
+    if(object.isKTestCase())
+        testCases.add(object);
+    //UTP need to have at least on assertion otherwise when running on testsuite acceptor break with message:
+    // 	Test 'TestTools.Reflection.Tests.Utils.ContainsObjectsMixed.UnitTestCase5' exited without recording any results;
+    else if (!GTObject.isNullOrUndefined(object.numberOfAssertions))
+        object.assert(true);
+}
+return testCases;
+]]>
+    </Verbatim>
+  </Procedure>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testPassesWhenCallsAreMadeInDifferentOrder"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator = Mock.createMock(Collaborator);
+
+collaborator.documentAdded("New Document");
+collaborator.computeTotal(new Collaborator("collab1"), new Collaborator("collab2"));
+
+Mock.replay(collaborator);
+
+collaborator.computeTotal(new Collaborator("collab1"), new Collaborator("collab2"));
+collaborator.documentAdded("New Document");
+
+
+assertEquals(null, Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+  </Procedure>

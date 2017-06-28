@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="GTFieldUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Utils" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="GTFieldUtil" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="MockBuilder"
+        nested="false"
+        version="4.1.0">
+      <InstanceFields>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="mockedMethods">
+          <ObjectField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[new GTList();]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="GTList"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="object">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="GTObject"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <ConstructionProcedure
+          name="MockBuilder"
+          nested="true" />
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="addMockedMethod"
+            nested="true" />
+        <Procedure
+            name="createMock"
+            nested="true" />
+        <Procedure
+            name="computeMethodsToMock"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

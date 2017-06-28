@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportPackageDeclaration>
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Utils" />
+      </PackageSpecifier>
+    </ImportPackageDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="ReflectionUtil"
+        nested="false"
+        version="4.1.0">
+      <ClassProcedures
+          name="">
+        <Procedure
+            name="hasMethod"
+            nested="true" />
+        <Procedure
+            name="hasEqualsMethod"
+            nested="true" />
+        <Procedure
+            name="equals"
+            nested="true" />
+        <Procedure
+            name="toString"
+            nested="true" />
+        <Procedure
+            name="equalsObject"
+            nested="true" />
+        <Procedure
+            name="doToString"
+            nested="true" />
+        <Procedure
+            name="isTypeObject"
+            nested="true" />
+        <Procedure
+            name="hasIteratorMethod"
+            nested="true" />
+        <Procedure
+            name="equalsList"
+            nested="true" />
+        <Procedure
+            name="areSameType"
+            nested="true" />
+      </ClassProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

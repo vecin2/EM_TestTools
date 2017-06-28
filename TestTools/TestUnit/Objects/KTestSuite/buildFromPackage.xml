@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="buildFromPackage"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="testSuite">
+        <TypeDefinitionReference
+            name="KTestSuite"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <StringField
+        designNotes=""
+        length="0"
+        name="packagePath" />
+    <ObjectField
+        designNotes=""
+        name="objectRepository">
+      <TypeDefinitionReference
+          name="ObjectRepository"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <ObjectField
+          designNotes=""
+          name="">
+        <TypeDefinitionReference
+            name="KTestSuite"
+            nested="false" />
+      </ObjectField>
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[testSuite = new KTestSuite();
+if(!objectRepository)
+    objectRepository = new ObjectRepository();
+testSuite.addAll(objectRepository.listTestCases(packagePath))
+return testSuite;
+]]>
+    </Verbatim>
+  </Procedure>

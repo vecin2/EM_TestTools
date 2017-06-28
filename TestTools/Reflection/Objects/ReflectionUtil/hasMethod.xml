@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="hasMethod"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="instanceProcedures">
+        <TypeDefinitionReference
+            name="GTList"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <ObjectField
+        designNotes=""
+        name="objectToCheck">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <StringField
+        designNotes=""
+        length="0"
+        name="methodName" />
+    <ResultType>
+      <BooleanField
+          designNotes=""
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(GTObject.isNullOrUndefined(objectToCheck) ||  typeof(objectToCheck) != "object"){
+    return false;
+}
+instanceProcedures = GTReflection.getType(objectToCheck.getFullyQualifiedName()).getInstanceProcedures();
+for(var i =0; i < instanceProcedures.size(); i++){
+    if(instanceProcedures.get(i).getName()== methodName)
+        return true;
+}
+return false;
+]]>
+    </Verbatim>
+  </Procedure>

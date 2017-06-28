@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="assertGetStringAroundChar"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <StringField
+        designNotes=""
+        length="0"
+        name="expectdResult" />
+    <StringField
+        designNotes=""
+        length="0"
+        name="string" />
+    <StringField
+        designNotes=""
+        length="0"
+        name="character" />
+    <IntegerField
+        designNotes=""
+        name="aroundLength" />
+    <Verbatim
+        fieldName="text">
+<![CDATA[assertEquals(expectdResult, StringHelper.getRelevantSubstring(string,string.indexOf(character),aroundLength));
+]]>
+    </Verbatim>
+  </Procedure>

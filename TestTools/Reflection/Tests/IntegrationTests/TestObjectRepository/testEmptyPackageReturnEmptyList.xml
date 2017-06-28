@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testEmptyPackageReturnEmptyList"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[objectRepository = new ObjectRepository();
+testCaseList = objectRepository.listTestCases("/TestTools/Reflection/Tests/Utils/EmptyPackage/");
+assertEquals(true, testCaseList.isEmpty());
+]]>
+    </Verbatim>
+  </Procedure>

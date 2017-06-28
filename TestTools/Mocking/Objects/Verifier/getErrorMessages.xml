@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="getErrorMessages"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <StringField
+          designNotes=""
+          length="0"
+          name="result" />
+      <ObjectField
+          designNotes=""
+          name="missedInvocations">
+        <TypeDefinitionReference
+            name="InvocationList"
+            nested="false" />
+      </ObjectField>
+      <ObjectField
+          name="missedInvocation">
+        <TypeDefinitionReference
+            name="Invocation"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <ResultType>
+      <StringField
+          designNotes=""
+          length="0"
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[missedInvocations=  InvocationList.computeInvocationsNotMade(expectedInvocations, actualInvocations);
+result="";
+for(var i=0; i< missedInvocations.size(); i++){
+        missedInvocation = missedInvocations.get(i);
+        result +=" "+missedInvocation.toString()+":"+
+        " expected: "+ expectedInvocations.extractInvocations(missedInvocation).size() +
+        ", actual: "+ actualInvocations.extractInvocations(missedInvocation).size();
+}
+return result;
+]]>
+    </Verbatim>
+  </Procedure>

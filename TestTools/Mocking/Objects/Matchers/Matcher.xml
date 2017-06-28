@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="Matcher"
+        nested="false"
+        version="4.1.0">
+      <ClassProcedures
+          name="">
+        <Procedure
+            name="notNull"
+            nested="true" />
+      </ClassProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="testThrowsExceptionWhenNoParameterInvocationButExpectsParameters"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator =Mock.createMock(Collaborator);
+collaborator.documentAdded("doc title");
+Mock.replay(collaborator);
+
+
+collaborator.documentAdded();
+
+assertEquals("Unexpected method call Collaborator.documentAdded():"+
+           " Collaborator.documentAdded(\"doc title\"): expected: 1, actual: 0",
+            Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+    <ReferenceParameters />
+    <ProcedureLocals />
+  </Procedure>

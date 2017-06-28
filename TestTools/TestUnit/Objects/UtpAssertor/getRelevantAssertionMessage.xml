@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="getRelevantAssertionMessage"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <StringField
+        length="0"
+        name="expected" />
+    <StringField
+        length="0"
+        name="actual" />
+    <ResultType>
+      <StringField
+          length="0"
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(StringHelper.indexOfDifferentCharacter(expected,actual)==-1){
+    return "Stringify objects are the same however the equals method returns different. Is 'equals' method implemented?";
+}
+else{
+    return "-->expected: "+ StringHelper.getRelevantSubstring(expected,StringHelper.indexOfDifferentCharacter(expected,actual), RELEVANT_RANGE_INDEX) +
+    "-->but was: "+ StringHelper.getRelevantSubstring(actual,StringHelper.indexOfDifferentCharacter(expected,actual), RELEVANT_RANGE_INDEX);
+
+}
+]]>
+    </Verbatim>
+  </Procedure>

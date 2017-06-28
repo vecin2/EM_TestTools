@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testExpectedExceptionIsCleanedAfterTestRuns"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <Verbatim
+        fieldName="text">
+<![CDATA[wasRun = new WasRun("testThrowInviteCancelledException");
+wasRun.expectException(new InviteCancelledException("This Invitation was cancelled"));
+wasRun.run(this);
+assertEquals(null, wasRun.expectedException);
+]]>
+    </Verbatim>
+  </Procedure>

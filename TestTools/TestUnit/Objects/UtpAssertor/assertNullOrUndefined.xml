@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="assertNullOrUndefined"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <ObjectField
+        name="object">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <StringField
+        length="0"
+        name="message" />
+    <Verbatim
+        fieldName="text">
+<![CDATA[utp.assertNullOrUndefined(object, message);
+]]>
+    </Verbatim>
+  </Procedure>

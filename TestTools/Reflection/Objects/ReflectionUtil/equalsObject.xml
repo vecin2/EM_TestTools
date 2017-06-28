@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="equalsObject"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+    </ProcedureLocals>
+    <ObjectField
+        designNotes=""
+        name="object1">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <ObjectField
+        designNotes=""
+        name="object2">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <ResultType>
+      <BooleanField
+          designNotes=""
+          name="" />
+    </ResultType>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(object1==object2)
+    return true;
+if(areSameType(object1, object2))
+    return false;
+if(ReflectionUtil.hasEqualsMethod(object1))
+    return object1.equals(object2);
+//if object does not have equals method return null or undefined which is different from true
+return false;
+]]>
+    </Verbatim>
+  </Procedure>

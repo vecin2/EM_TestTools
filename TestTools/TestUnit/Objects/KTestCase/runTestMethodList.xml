@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="runTestMethodList"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          designNotes=""
+          name="iterator">
+        <TypeDefinitionReference
+            name="GTListIterator"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(!testCasesIterator)
+    testCasesIterator = getTestsToRun().iterator();
+
+while(testCasesIterator.hasNext()){
+    runTestMethod(testCasesIterator.next());
+}
+]]>
+    </Verbatim>
+    <ExceptionHandler
+        name=""
+        procedure="handleException"
+        version="">
+      <ExceptionDefinitionReference
+          name="Exception"
+          nested="false" />
+    </ExceptionHandler>
+  </Procedure>

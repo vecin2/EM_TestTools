@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="testPassesWhenSameObjectIsPassedTwiceAsParam"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <ObjectField
+          name="param">
+        <TypeDefinitionReference
+            name="Collaborator"
+            nested="false" />
+      </ObjectField>
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[collaborator = Mock.createMock(Collaborator);
+
+collaborator.logRemove(new Collaborator("collab1"));
+collaborator.logRemove(new Collaborator("collab2"));
+
+Mock.replay(collaborator);
+param =new Collaborator("collab1");
+collaborator.logRemove(param);
+param.name = "collab2";
+collaborator.logRemove(param);
+
+
+assertEquals(null, Mock.verifyMsg(collaborator));
+]]>
+    </Verbatim>
+  </Procedure>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      isTPL="false"
+      language="EcmaScript"
+      name="testGetRelevantSubstring"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals>
+      <StringField
+          designNotes=""
+          length="0"
+          name="string" />
+    </ProcedureLocals>
+    <Verbatim
+        fieldName="text">
+<![CDATA[//midle char add dots at the beggining and the end
+assertGetStringAroundChar("...name:Davi...","[name:David Garcia]",":",4);
+
+//char at the beginning only show dots at the end
+assertGetStringAroundChar("[name:David...","[name:David Garcia]",":",5);
+
+//Relevant range length passes starting of string - it should start from the beginning of the string
+assertGetStringAroundChar("[name:David Garcia...","[name:David Garcia]",":",12);
+
+//char at the end only show dots at the beginning
+assertGetStringAroundChar("...le name:Garcia]","[Middle name:Garcia]",":",7);
+
+//char at the end only show dots at the beginning
+assertGetStringAroundChar("...le name:Garcia]","[Middle name:Garcia]",":",7);
+
+
+//is string is null return undefined always
+assertEquals("undefined", StringHelper.getRelevantSubstring(null,0,5));
+]]>
+    </Verbatim>
+  </Procedure>

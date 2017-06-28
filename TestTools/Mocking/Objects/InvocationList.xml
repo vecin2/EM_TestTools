@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ListDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="ReflectionUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ReflectionUtil" />
+    </ImportDeclaration>
+    <ListDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="InvocationList"
+        nested="false"
+        version="4.1.0"
+        xsdField="">
+      <ClassProcedures
+          name="">
+        <Procedure
+            name="computeInvocationsNotMade"
+            nested="true" />
+      </ClassProcedures>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="containsInvocation"
+            nested="true" />
+        <Procedure
+            name="extractInvocations"
+            nested="true" />
+        <Procedure
+            name="equalsNotConsideringOrder"
+            nested="true" />
+        <Procedure
+            name="removeFirstFound"
+            nested="true" />
+        <Procedure
+            name="removeByInvocationList"
+            nested="true" />
+      </InstanceProcedures>
+      <RecordDefinitionReference
+          name="Invocation"
+          nested="false" />
+    </ListDefinition>
+  </PackageEntry>

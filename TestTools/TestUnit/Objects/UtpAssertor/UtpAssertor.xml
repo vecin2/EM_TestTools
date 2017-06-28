@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConstructionProcedure [] >
+  <ConstructionProcedure
+      designNotes="Undefined"
+      isTPL="false"
+      language="EcmaScript"
+      name="UtpAssertor"
+      nested="false"
+      version="4.1.0">
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <ObjectField
+        designNotes=""
+        name="utp">
+      <TypeDefinitionReference
+          name="GTUnitTestProcess"
+          nested="false" />
+    </ObjectField>
+    <Verbatim
+        fieldName="text">
+<![CDATA[this.utp = utp;
+]]>
+    </Verbatim>
+  </ConstructionProcedure>

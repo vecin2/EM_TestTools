@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ObjectDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="Map">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="FrameworkCommon" />
+        <PackageName
+            name="API" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="Map" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ReflectionUtil">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Reflection" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ReflectionUtil" />
+    </ImportDeclaration>
+    <ObjectDefinition
+        designNotes="Undefined"
+        isPrivate="false"
+        name="Verifier"
+        nested="false"
+        version="4.1.0">
+      <InstanceFields>
+        <BooleanField
+            designNotes=""
+            isAttribute="false"
+            name="isRegistering">
+          <BooleanField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[true]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </BooleanField_loc>
+        </BooleanField>
+        <StringField
+            designNotes=""
+            isAttribute="false"
+            length="0"
+            name="objectPath">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="actualInvocations">
+          <ObjectField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[new InvocationList();]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="InvocationList"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="expectedInvocations">
+          <ObjectField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[new InvocationList();]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="InvocationList"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="unexpectedInvocation">
+          <ObjectField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[null]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="Invocation"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="expectedResults">
+          <ObjectField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[new InvocationList();]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="InvocationList"
+              nested="false" />
+        </ObjectField>
+        <ObjectField
+            designNotes=""
+            isAggregate="false"
+            isAttribute="false"
+            name="leftExpectedInvocations">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="InvocationList"
+              nested="false" />
+        </ObjectField>
+      </InstanceFields>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="registerCall"
+            nested="true" />
+        <Procedure
+            name="verify"
+            nested="true" />
+        <Procedure
+            name="verifyMsg"
+            nested="true" />
+        <Procedure
+            name="replay"
+            nested="true" />
+        <Procedure
+            name="setObjectPath"
+            nested="true" />
+        <Procedure
+            name="getObjectName"
+            nested="true" />
+        <Procedure
+            name="addExpectedInvocation"
+            nested="true" />
+        <Procedure
+            name="addActualInvocation"
+            nested="true" />
+        <Procedure
+            name="behaviourAsExpected"
+            nested="true" />
+        <Procedure
+            name="findUnexpectedInvocation"
+            nested="true" />
+        <Procedure
+            name="getErrorMessages"
+            nested="true" />
+      </InstanceProcedures>
+    </ObjectDefinition>
+  </PackageEntry>

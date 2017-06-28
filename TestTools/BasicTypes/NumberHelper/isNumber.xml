@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="isNumber"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[if(!object)
+    return false;
+return NumberUtil.isNumber(object);
+]]>
+    </Verbatim>
+    <ObjectField
+        isAggregate="false"
+        isAttribute="false"
+        name="object">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <ReferenceParameters />
+    <ProcedureLocals />
+    <ResultType>
+      <BooleanField
+          isAttribute="false"
+          name="" />
+    </ResultType>
+  </Procedure>

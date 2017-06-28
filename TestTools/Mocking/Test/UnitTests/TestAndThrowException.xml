@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE UnitTestProcess [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="Mock">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="Mock" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="Collaborator">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Test" />
+        <PackageName
+            name="Utils" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="Collaborator" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="SomeException">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="TestTools" />
+        <PackageName
+            name="Mocking" />
+        <PackageName
+            name="Test" />
+        <PackageName
+            name="Utils" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="SomeException" />
+    </ImportDeclaration>
+    <UnitTestProcess
+        appearsInHistory="true"
+        cyclic="false"
+        designNotes="Undefined"
+        exceptionStrategy="1"
+        icon=""
+        isPrivate="false"
+        logicalDatabaseConnection=""
+        name="TestAndThrowException"
+        nested="false"
+        pointOfNoReturn="false"
+        targetPackage=""
+        transactionBehaviour="TX_NOT_SUPPORTED"
+        version="4.1.0"
+        waitOnChildren="false">
+      <InstanceFields>
+        <IntegerField
+            isAttribute="false"
+            name="numberOfAssertions">
+          <IntegerField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[0]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </IntegerField_loc>
+        </IntegerField>
+      </InstanceFields>
+      <InstanceProcedures
+          name="">
+        <Procedure
+            name="setUp"
+            nested="true" />
+        <Procedure
+            name="test"
+            nested="true" />
+        <Procedure
+            name="assertCorrectException"
+            nested="true" />
+      </InstanceProcedures>
+      <StartNode
+          displayName=""
+          name=""
+          x="21"
+          y="64" />
+      <EndNode
+          displayName=""
+          name=""
+          x="501"
+          y="64" />
+      <ProcedureCall
+          builtIn="false"
+          classMethod="false"
+          displayName="setUp"
+          methodName="setUp"
+          name="setUp"
+          resultType=""
+          type="UnitTestProcess"
+          x="165"
+          y="64">
+        <RecordDefinitionReference
+            name="TestAndThrowException"
+            nested="false" />
+      </ProcedureCall>
+      <ProcedureCall
+          builtIn="false"
+          classMethod="false"
+          displayName="test"
+          methodName="test"
+          name="test"
+          resultType=""
+          type="UnitTestProcess"
+          x="304"
+          y="64">
+        <RecordDefinitionReference
+            name="TestAndThrowException"
+            nested="false" />
+      </ProcedureCall>
+      <ProcedureCall
+          builtIn="false"
+          classMethod="false"
+          displayName=""
+          methodName="assertCorrectException"
+          name="assertCorrectException"
+          resultType=""
+          type="UnitTestProcess"
+          x="416"
+          y="208">
+        <RecordDefinitionReference
+            name="TestAndThrowException"
+            nested="false" />
+      </ProcedureCall>
+      <AssignNode
+          displayName="assertFalse"
+          name="assertFalse"
+          x="432"
+          y="64">
+        <AssignElement
+            name="">
+          <AssignmentField
+              exceptionStrategy="0"
+              language="EcmaScript"
+              name=""
+              version="">
+            <Verbatim
+                fieldName="text">
+<![CDATA[assertTrue(false,"Should have thrown an exception but it didn't")]]>
+            </Verbatim>
+          </AssignmentField>
+          <AssignmentValue
+              exceptionStrategy="0"
+              language="EcmaScript"
+              name=""
+              version="" />
+        </AssignElement>
+      </AssignNode>
+      <Transition
+          isExceptionTransition="false"
+          name="transition0">
+        <StartNodeReference
+            name="" />
+        <ToNode
+            name="setUp" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="85"
+              y="64" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition1">
+        <FromNode
+            name="setUp" />
+        <ToNode
+            name="test" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="240"
+              y="64" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition2">
+        <FromNode
+            name="test" />
+        <ToNode
+            name="assertFalse" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="384"
+              y="64" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="true"
+          name="transition3">
+        <FromNode
+            name="test" />
+        <ToNode
+            name="assertCorrectException" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="336"
+              y="176" />
+        </GraphNodeList>
+        <ExceptionDefinitionReference
+            name="SomeException"
+            nested="false" />
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition4">
+        <FromNode
+            name="assertCorrectException" />
+        <EndNodeReference
+            name="" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="512"
+              y="208" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition5">
+        <FromNode
+            name="assertFalse" />
+        <EndNodeReference
+            name="" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="464"
+              y="64" />
+        </GraphNodeList>
+      </Transition>
+      <BuilderInfo
+          name="" />
+      <TopicScope
+          defineTopicScope="false"
+          name="" />
+      <OnExitProcedure
+          name="onExit"
+          nested="true" />
+    </UnitTestProcess>
+  </PackageEntry>

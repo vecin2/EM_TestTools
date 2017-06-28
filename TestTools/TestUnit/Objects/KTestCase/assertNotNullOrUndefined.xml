@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Procedure [] >
+  <Procedure
+      designNotes="Undefined"
+      exceptionStrategy="0"
+      isPending="false"
+      language="EcmaScript"
+      name="assertNotNullOrUndefined"
+      nested="false"
+      version="4.1.0">
+    <Verbatim
+        fieldName="text">
+<![CDATA[getAssertor().assertNotNullOrUndefined(object, message);
+]]>
+    </Verbatim>
+    <ObjectField
+        isAggregate="false"
+        isAttribute="false"
+        name="object">
+      <TypeDefinitionReference
+          name="GTObject"
+          nested="false" />
+    </ObjectField>
+    <StringField
+        isAttribute="false"
+        length="0"
+        name="message" />
+    <ReferenceParameters />
+    <ProcedureLocals />
+  </Procedure>
